@@ -6,8 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'The Vault',
-  description: 'Trading Card Game for Collectors. Latest products for Pokemon TCG and One Piece TCG available.',
-  icon: { url: '/cards.png', type: 'image/png' },
+  description: 'Trading Card Game for Collectors. Latest products for Pokemon TCG and One Piece TCG available.'
 }
 
 export default function RootLayout({ children }) {
