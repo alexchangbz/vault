@@ -1,14 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Head from 'next/head'
 
 export default function Home() {
   return (
     <>
-      <Head>
-        {/* Add your favicon link below */}
-        <link rel="icon" href="/cards.ico" />
-      </Head>
       <main className="flex min-h-screen flex-col items-center justify-center p-24 gap-[6rem]">
         <div>
           <Link href="https://api.whatsapp.com/send?phone=60162019881&text=Hi%2C%20wassup%20DegenKingMy" legacyBehavior>
