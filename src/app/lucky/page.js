@@ -18,13 +18,13 @@ const Lucky = () => {
     }, [table])
     
   return (
-    <div className="p-24">
+    <div className="p-24 bg-[#333] h-screen">
         {/* {JSON.stringify(table)} */}
-        <div>
-            {`< `}
-            <Link href="/">
-                Balik Homepage
+        <div className="text-[0.8rem] text-[#fff] m-3">
+            <Link className="text-blue-700" href="/">
+                Home
             </Link>
+            {` | LuckyDraw`}
         </div>
         <div className="text-center my-5">
             Slot Sekarang: {table.length} / 200
