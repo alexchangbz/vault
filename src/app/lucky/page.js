@@ -18,7 +18,7 @@ const Lucky = () => {
     }, [table])
     
   return (
-    <div className="p-24 bg-[#333] h-screen">
+    <div className="p-24 bg-[#333] min-h-screen">
         {/* {JSON.stringify(table)} */}
         <div className="text-[0.8rem] text-[#fff] m-3">
             <Link className="text-blue-700" href="/">
