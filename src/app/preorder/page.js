@@ -49,7 +49,7 @@ const PreOrder = () => {
 
             <div className="mt-5 flex justify-center">
               <Link 
-                  href={`https://api.whatsapp.com/send?phone=60162019881&text=Hi, I want to buy, RM`}
+                  href={`https://api.whatsapp.com/send?phone=60162019881&text=Hi, I am interested to pre-order Paradox Rift Booster Box`}
                   legacyBehavior
               >
                   <a  className="bg-emerald-800 text-white px-5 py-2 rounded-md" target="_blank" rel="noopener noreferrer">
