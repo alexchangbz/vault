@@ -18,6 +18,14 @@ export default function Home() {
         </div>
 
         <div>
+          <Link href="/preorder" className='text-[#fff] text-[1.6rem] bg-[url("/images/paradox_rift.png")] bg-center bg-cover block h-[180px] w-[300px] font-[500] flex justify-center items-center rounded-md'>
+            <span className='p-3 bg-[#33333370] rounded-md'>
+              Pre-Order
+            </span>
+          </Link>
+        </div>
+
+        <div>
           <Link href="/shop" className='text-[#fff] text-[1.6rem] bg-[url("/images/detective_pikachu.jpg")] bg-center bg-cover block h-[180px] w-[300px] font-[500] flex justify-center items-center rounded-md'>
             <span className='p-3 bg-[#33333370] rounded-md'>
               Shopping

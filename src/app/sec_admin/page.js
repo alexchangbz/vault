@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const productInitialState = { product_name: "", description: "", price: "", affiliate_link: "", product_image: "" }
 
@@ -8,6 +8,7 @@ const SecretAdmin = () => {
     const [name, setName] = useState("")
     const [message, setMessage] = useState("")
     const [product, setProduct] = useState(productInitialState)
+    const [products, setProducts] = useState([])
 
     const addName = async () => {
         setMessage("")
@@ -47,8 +48,19 @@ const SecretAdmin = () => {
         setProduct(productInitialState)
     }
 
+    const getProducts = async () => {
+        const response = await fetch('/api/products/get_products')
+        const result = await response.json()
+
+        setProducts(result.products)
+    }
+
+    useEffect(() => {
+        getProducts()
+    }, [])
+
     return (
-        <div className="h-screen bg-[#333] p-24">
+        <div className="min-h-screen bg-[#333] p-24">
             <div>
                 <div className="text-[1.4rem] text-center">Lucky Draw</div>
                 <div>{message}</div>
@@ -101,6 +113,35 @@ const SecretAdmin = () => {
                     />
                     <button className='bg-emerald-500 px-4 py-2 rounded-md' onClick={addProduct}>Add</button>
                 </div>
+            </div>
+
+            <div>
+                <table>
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Product Name</th>
+                                <th>Product Price</th>
+                                <th>Product Description</th>
+                                <th>Product Image Name</th>
+                                <th>Edit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {products.map((item, index) => 
+                                <tr key={index}>
+                                    <td>{index + 1}</td>
+                                    <td className="text-center">{item.product_name}</td>
+                                    <td className="text-center">RM {item.price}</td>
+                                    <td className="text-center">{item.description}</td>
+                                    <td className="text-center">{item.product_image}</td>
+                                    <td className="text-center">
+                                        <button className="bg-sky-500 px-4 py-1 rounded-md">Edit</button>
+                                    </td>
+                                </tr>
+                            )}
+                        </tbody>    
+                </table>
             </div>
         </div>
     )
