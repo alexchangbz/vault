@@ -23,7 +23,7 @@ const Shop = () => {
         </div>
 
     return (
-        <div className='bg-[url("/images/shop_bg.png")] h-screen'>
+        <div className='bg-[url("/images/shop_bg.png")] min-h-screen'>
             <div className="text-center py-5 bg-[#33333380]">
                 <h1 className="text-[2rem] font-[600]">DegenKingMy TCG Shop</h1>
                 <p>{`Price not inclusive of shipping. Minimum shipping fee for West Malaysia is RM8.00 & East Malaysia is RM15.00`}</p>
@@ -38,7 +38,7 @@ const Shop = () => {
 
             <div className='flex justify-center gap-5 flex-wrap'>
                 {product.map((product, index) => (
-                    <div key={index} className="bg-gradient-to-br from-emerald-500 via-blue-500 to-indigo-500 border-4 border-slate-200 flex flex-col items-center justify-center h-[400px] max-w-[90%] rounded-md my-5">
+                    <div key={index} className="md:w-[25%] w-[100%] bg-gradient-to-br from-emerald-500 via-blue-500 to-indigo-500 border-4 border-slate-200 flex flex-col items-center justify-center h-[400px] max-w-[90%] rounded-md my-5">
                         <h2 className="text-[1rem] w-[75%] text-center">{product.product_name}</h2>
                         <Image 
                             src={`/images/${product.product_image}.jpg`}
